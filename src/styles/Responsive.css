@@ -1,0 +1,83 @@
+/* Mobile-specific styles for terminal */
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 1rem;
+    height: 100vh;
+  }
+
+  .terminal-container {
+    height: 90vh;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  /* Adjust prompt for mobile */
+  .prompt {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 4px;
+  }
+
+  .prompt .path::before {
+    content: "\\A";
+    white-space: pre;
+  }
+
+  .prompt .prompt-symbol {
+    margin-top: 2px;
+  }
+
+  /* Adjust font size for better readability on mobile */
+  .terminal-body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Adjust header for mobile */
+  .terminal-header {
+    padding: 8px 10px;
+  }
+
+  .terminal-header .title {
+    font-size: 12px;
+  }
+
+  .terminal-header .circle {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Adjust input section for mobile */
+  .input-section {
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0.5rem;
+  }
+
+  .terminal-container {
+    height: 95vh;
+    font-size: 12px;
+  }
+
+  .terminal-body {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .input-section {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .prompt {
+    margin-bottom: 4px;
+  }
+
+  .input-field {
+    font-size: 12px;
+  }
+}
